@@ -1,1 +1,1299 @@
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>For Sanjana ❤️</title>
 
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+
+html{scroll-behavior:smooth}
+
+body{
+  min-height:100vh;
+  overflow-x:hidden;
+  font-family:"Segoe UI",Arial,sans-serif;
+  color:#fff;
+  background:
+    radial-gradient(circle at 20% 10%,#5d245f,transparent 35%),
+    radial-gradient(circle at 80% 90%,#8f245d,transparent 35%),
+    linear-gradient(135deg,#0d0318,#210721,#09000f);
+}
+
+/* INTRO */
+#intro{
+  position:fixed;
+  inset:0;
+  z-index:9999;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  text-align:center;
+  background:radial-gradient(circle,#351441,#0c0214 70%);
+  transition:1s;
+}
+
+.intro-box{padding:30px;animation:intro 1.5s ease}
+
+@keyframes intro{
+  from{opacity:0;transform:scale(.7)}
+  to{opacity:1;transform:scale(1)}
+}
+
+.intro-small{
+  letter-spacing:5px;
+  font-size:11px;
+  opacity:.65;
+}
+
+.intro-box h1{
+  font:clamp(48px,13vw,90px) Georgia,serif;
+  margin:20px 0;
+  background:linear-gradient(90deg,#fff,#ff8fb8,#fff);
+  background-size:200%;
+  -webkit-background-clip:text;
+  color:transparent;
+  animation:shine 3s linear infinite;
+}
+
+@keyframes shine{to{background-position:200%}}
+
+.start{
+  border:1px solid rgba(255,255,255,.4);
+  border-radius:50px;
+  padding:16px 30px;
+  background:rgba(255,255,255,.1);
+  color:#fff;
+  font-size:16px;
+  cursor:pointer;
+}
+
+/* MAIN */
+#main{display:none}
+
+section{
+  min-height:100vh;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  padding:60px 18px;
+}
+
+.card{
+  width:min(850px,100%);
+  padding:45px 25px;
+  text-align:center;
+  border-radius:32px;
+  background:rgba(255,255,255,.07);
+  border:1px solid rgba(255,255,255,.14);
+  backdrop-filter:blur(18px);
+  box-shadow:0 30px 90px rgba(0,0,0,.45);
+}
+
+.label{
+  font-size:11px;
+  letter-spacing:5px;
+  opacity:.55;
+}
+
+/* HERO */
+.hero h1{
+  font:clamp(44px,11vw,85px) Georgia,serif;
+  line-height:1.05;
+  margin-top:15px;
+}
+
+.name{
+  background:linear-gradient(90deg,#fff,#ff8fb8,#fff);
+  background-size:200%;
+  -webkit-background-clip:text;
+  color:transparent;
+  animation:shine 3s linear infinite;
+}
+
+.cake{
+  font-size:95px;
+  margin:30px 0 15px;
+  animation:cake 2s ease-in-out infinite;
+}
+
+@keyframes cake{
+  50%{transform:translateY(-12px) rotate(2deg)}
+}
+
+.subtitle{
+  font-size:18px;
+  line-height:1.8;
+  opacity:.75;
+}
+
+/* BALLOONS */
+.balloon-area{
+  display:flex;
+  flex-wrap:wrap;
+  justify-content:center;
+  gap:15px;
+  margin:40px auto;
+  max-width:650px;
+}
+
+.balloon{
+  width:62px;
+  height:80px;
+  border-radius:50% 50% 45% 45%;
+  position:relative;
+  cursor:pointer;
+  animation:floatBalloon 3s ease-in-out infinite;
+  transition:.2s;
+}
+
+.balloon:nth-child(even){animation-delay:.5s}
+
+.balloon:after{
+  content:"";
+  position:absolute;
+  width:1px;
+  height:30px;
+  background:rgba(255,255,255,.5);
+  left:50%;
+  bottom:-30px;
+}
+
+.balloon:before{
+  content:"";
+  position:absolute;
+  bottom:-5px;
+  left:50%;
+  transform:translateX(-50%);
+  border-left:6px solid transparent;
+  border-right:6px solid transparent;
+  border-top:10px solid currentColor;
+}
+
+.balloon span{
+  position:absolute;
+  top:31px;
+  left:0;
+  width:100%;
+  text-align:center;
+  font-size:9px;
+  font-weight:bold;
+}
+
+@keyframes floatBalloon{
+  50%{transform:translateY(-10px) rotate(2deg)}
+}
+
+.popping{
+  animation:pop .35s forwards!important;
+}
+
+@keyframes pop{
+  50%{transform:scale(1.5)}
+  100%{transform:scale(0);opacity:0}
+}
+
+#balloonMessage{
+  min-height:35px;
+  font-size:18px;
+  color:#ff9fc4;
+}
+
+/* MESSAGE */
+#revealed{
+  display:none;
+  margin-top:35px;
+  animation:appear 1s ease;
+}
+
+@keyframes appear{
+  from{opacity:0;transform:translateY(30px)}
+  to{opacity:1;transform:translateY(0)}
+}
+
+.message{
+  max-width:650px;
+  margin:auto;
+  font-size:17px;
+  line-height:2;
+}
+
+.message h2{
+  font:36px Georgia,serif;
+  margin-bottom:20px;
+}
+
+/* QUOTES */
+.quote{
+  max-width:650px;
+  margin:25px auto;
+  padding:25px;
+  border-left:3px solid #ff82ae;
+  background:rgba(255,255,255,.05);
+  border-radius:0 20px 20px 0;
+  font:italic 19px/1.8 Georgia,serif;
+}
+
+.quote small{
+  display:block;
+  margin-top:12px;
+  font:13px "Segoe UI",sans-serif;
+  opacity:.55;
+}
+
+/* LETTER */
+.letter-section{
+  flex-direction:column;
+}
+
+.letter-heading{
+  text-align:center;
+  margin-bottom:45px;
+}
+
+.letter-heading h2{
+  font:clamp(35px,8vw,58px)/1.1 Georgia,serif;
+  margin:15px 0;
+}
+
+.letter-heading p{opacity:.6}
+
+/* ENVELOPE */
+.envelope{
+  width:min(560px,92vw);
+  height:340px;
+  position:relative;
+  cursor:pointer;
+  transition:.5s;
+}
+
+.envelope:hover{transform:translateY(-8px)}
+
+.envelope-body{
+  position:absolute;
+  inset:0;
+  overflow:hidden;
+  border-radius:8px;
+  background:linear-gradient(145deg,#f5d5c8,#dfaaa5);
+  box-shadow:0 30px 70px rgba(0,0,0,.45);
+}
+
+.envelope-body:before,
+.envelope-body:after{
+  content:"";
+  position:absolute;
+  bottom:0;
+  width:0;
+  height:0;
+  border-style:solid;
+}
+
+.envelope-body:before{
+  left:0;
+  border-width:0 0 220px 280px;
+  border-color:transparent transparent #dca39e transparent;
+}
+
+.envelope-body:after{
+  right:0;
+  border-width:220px 280px 0 0;
+  border-color:#d39894 transparent transparent transparent;
+}
+
+.flap{
+  position:absolute;
+  top:0;
+  left:0;
+  width:100%;
+  height:190px;
+  z-index:5;
+  background:#f0c5b8;
+  clip-path:polygon(0 0,100% 0,50% 100%);
+  transform-origin:top;
+  transition:1.3s cubic-bezier(.2,.8,.2,1);
+}
+
+.envelope.open .flap{
+  transform:rotateX(180deg);
+}
+
+.seal{
+  position:absolute;
+  z-index:8;
+  top:50%;
+  left:50%;
+  transform:translate(-50%,-50%);
+  width:75px;
+  height:75px;
+  border-radius:50%;
+  background:radial-gradient(circle at 30% 30%,#ff9cbd,#b73763);
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  font-size:30px;
+  box-shadow:0 8px 20px rgba(0,0,0,.25);
+  transition:.5s;
+}
+
+.envelope.open .seal{
+  opacity:0;
+  transform:translate(-50%,-50%) scale(1.5);
+}
+
+.envelope-name{
+  position:absolute;
+  z-index:3;
+  top:58%;
+  left:50%;
+  transform:translate(-50%,-50%);
+  color:#693541;
+  text-align:center;
+}
+
+.envelope-name span{
+  display:block;
+  font-size:9px;
+  letter-spacing:4px;
+  opacity:.5;
+}
+
+.envelope-name strong{
+  display:block;
+  font:38px Georgia,serif;
+}
+
+.hint{
+  position:absolute;
+  width:100%;
+  bottom:-55px;
+  text-align:center;
+  font-size:13px;
+  opacity:.5;
+}
+
+/* PAPER */
+.paper{
+  display:none;
+  width:min(720px,94vw);
+  margin-top:75px;
+  position:relative;
+  color:#34252a;
+  padding:65px 55px;
+  background:
+    linear-gradient(rgba(130,90,50,.035) 1px,transparent 1px),
+    #fff9ed;
+  background-size:100% 34px;
+  box-shadow:0 30px 90px rgba(0,0,0,.5);
+  animation:unfold 1.5s ease;
+}
+
+@keyframes unfold{
+  from{
+    opacity:0;
+    transform:perspective(1000px) rotateX(-75deg) translateY(-70px);
+  }
+  to{
+    opacity:1;
+    transform:perspective(1000px) rotateX(0) translateY(0);
+  }
+}
+
+.paper:before{
+  content:"";
+  position:absolute;
+  inset:18px;
+  border:1px solid rgba(100,60,40,.18);
+}
+
+.date{
+  position:relative;
+  text-align:right;
+  font:13px Georgia,serif;
+  color:#80656a;
+  margin-bottom:35px;
+}
+
+.hand{
+  position:relative;
+  font:"17px 'Segoe Print','Bradley Hand','Comic Sans MS',cursive";
+  font-size:17px;
+  line-height:1.95;
+  margin:17px 0;
+  opacity:0;
+  animation:write .7s ease forwards;
+}
+
+@keyframes write{
+  from{opacity:0;transform:translateX(-10px)}
+  to{opacity:1;transform:translateX(0)}
+}
+
+.emphasis{
+  color:#933e5d;
+  font-weight:bold;
+}
+
+.big{
+  font-size:25px;
+}
+
+.letterQuote{
+  position:relative;
+  margin:38px 5px;
+  padding:25px 15px;
+  text-align:center;
+  color:#873c56;
+  font:italic 20px/1.8 "Segoe Print","Bradley Hand",cursive;
+  border-top:1px solid rgba(130,70,80,.3);
+  border-bottom:1px solid rgba(130,70,80,.3);
+  opacity:0;
+  animation:write .8s ease forwards;
+}
+
+.signature{
+  position:relative;
+  margin-top:50px;
+  text-align:right;
+  font-family:"Segoe Print","Bradley Hand",cursive;
+}
+
+.signature small{
+  display:block;
+  opacity:.6;
+}
+
+.signature strong{
+  display:block;
+  color:#793b52;
+  font:48px "Brush Script MT","Segoe Script",cursive;
+  transform:rotate(-4deg);
+}
+
+.signature span{
+  color:#c33c65;
+  font-size:22px;
+}
+
+/* FINAL */
+.final-title{
+  font:clamp(45px,12vw,80px) Georgia,serif;
+}
+
+.final-text{
+  max-width:600px;
+  margin:25px auto;
+  font-size:18px;
+  line-height:2;
+}
+
+/* FLOATING ELEMENTS */
+.heart{
+  position:fixed;
+  bottom:-50px;
+  pointer-events:none;
+  z-index:100;
+  animation:heartUp linear forwards;
+}
+
+@keyframes heartUp{
+  to{
+    transform:translateY(-110vh) rotate(360deg);
+    opacity:0;
+  }
+}
+
+.confetti{
+  position:fixed;
+  top:-20px;
+  width:8px;
+  height:14px;
+  z-index:999;
+  animation:fall linear forwards;
+}
+
+@keyframes fall{
+  to{transform:translateY(110vh) rotate(720deg)}
+}
+
+.star{
+  position:fixed;
+  width:3px;
+  height:3px;
+  border-radius:50%;
+  background:white;
+  opacity:.4;
+  animation:twinkle 2s infinite alternate;
+  pointer-events:none;
+}
+
+@keyframes twinkle{
+  to{opacity:1;transform:scale(1.6)}
+}
+
+/* MOBILE */
+@media(max-width:600px){
+
+  .card{padding:35px 17px}
+
+  .balloon{
+    width:53px;
+    height:68px;
+  }
+
+  .envelope{height:275px}
+
+  .flap{height:150px}
+
+  .paper{padding:55px 28px}
+
+  .paper:before{inset:12px}
+
+  .hand{
+    font-size:15px;
+    line-height:1.9;
+  }
+
+  .letterQuote{font-size:17px}
+
+  .signature strong{font-size:40px}
+}
+</style>
+</head>
+
+<body>
+
+<!-- =====================================================
+     INTRO
+===================================================== -->
+
+<div id="intro">
+
+  <div class="intro-box">
+
+    <div class="intro-small">
+      A LITTLE SOMETHING FOR YOU
+    </div>
+
+    <h1>Sanjana ❤️</h1>
+
+    <p style="opacity:.65;margin-bottom:25px">
+      Your birthday surprise is waiting...
+    </p>
+
+    <button class="start" onclick="start()">
+      ✨ Open Your Surprise
+    </button>
+
+  </div>
+
+</div>
+
+
+<!-- =====================================================
+     MAIN
+===================================================== -->
+
+<div id="main">
+
+
+<!-- HERO -->
+
+<section>
+
+  <div class="card">
+
+    <div class="label">
+      TODAY IS YOUR DAY
+    </div>
+
+    <div class="hero">
+
+      <h1>Happy Birthday</h1>
+
+      <h1 class="name">Sanjana ❤️</h1>
+
+      <div class="cake">🎂</div>
+
+      <p class="subtitle">
+        A normal birthday wish didn't feel enough...
+        <br>
+        so I made you a little world of your own. ✨
+      </p>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- BALLOONS -->
+
+<section>
+
+  <div class="card">
+
+    <div class="label">
+      FIRST SURPRISE
+    </div>
+
+    <h2 style="font:34px Georgia,serif;margin:15px">
+      🎈 Pop Them All 🎈
+    </h2>
+
+    <p style="opacity:.65;line-height:1.7">
+      Har balloon ke andar tumhare liye
+      ek chhoti si baat chhupi hai.
+      <br>
+      Sabko burst karo. ❤️
+    </p>
+
+    <div id="balloons" class="balloon-area"></div>
+
+    <div id="balloonMessage"></div>
+
+
+    <div id="revealed">
+
+      <div class="message">
+
+        <h2>For You 💌</h2>
+
+        <p>
+          Sanjana, birthdays har saal aate hain,
+          lekin kuch log aise hote hain jinki presence
+          ordinary moments ko bhi special bana deti hai.
+        </p>
+
+        <br>
+
+        <p>
+          Tumhari smile, tumhari baatein,
+          tumhara cute sa pagalpan aur tumhare dreams —
+          sab apni jagah special hain.
+        </p>
+
+        <br>
+
+        <p>
+          I hope life tumhe woh sab de jo tum deserve karti ho.
+          Aur sabse zyada...
+          <b>reasons to keep smiling.</b> ❤️
+        </p>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- QUOTES -->
+
+<section>
+
+  <div class="card">
+
+    <div class="label">
+      A FEW WORDS FOR YOU
+    </div>
+
+    <div class="quote">
+      "Some people become memories,
+      some become lessons,
+      and some quietly become
+      a beautiful part of your heart."
+
+      <small>— For you, Sanjana ❤️</small>
+    </div>
+
+    <div class="quote">
+      "Zindagi kitni bhi busy ho jaaye,
+      kuch logon ke liye dil mein
+      ek special corner hamesha bana rehta hai."
+
+      <small>— 🌸</small>
+    </div>
+
+    <div class="quote">
+      "If I could give you one gift,
+      I'd give you the ability to see yourself
+      the way the people who care about you see you."
+
+      <small>— You'd know how special you are.</small>
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- =====================================================
+     LETTER
+===================================================== -->
+
+<section class="letter-section">
+
+  <div class="letter-heading">
+
+    <div class="label">
+      ONE LAST THING
+    </div>
+
+    <h2>
+      A Letter<br>
+      For Sanjana
+    </h2>
+
+    <p>
+      Some things are better written than spoken. ❤️
+    </p>
+
+  </div>
+
+
+  <!-- ENVELOPE -->
+
+  <div id="envelope"
+       class="envelope"
+       onclick="openLetter()">
+
+    <div class="envelope-body">
+
+      <div class="envelope-name">
+        <span>TO</span>
+        <strong>Sanjana</strong>
+        <small>with love</small>
+      </div>
+
+    </div>
+
+    <div class="flap"></div>
+
+    <div class="seal">
+      ❤️
+    </div>
+
+    <div class="hint">
+      Tap to open your letter
+      <br>↓
+    </div>
+
+  </div>
+
+
+  <!-- PAPER -->
+
+  <div id="paper" class="paper">
+
+    <div class="date">
+      06 • 10 • 2026
+    </div>
+
+
+    <div class="hand">
+      Dear Sanjana,
+    </div>
+
+    <div class="hand">
+      I have thought a lot about what I should write here.
+      Because honestly, some feelings are much easier to
+      feel than they are to put into words.
+    </div>
+
+    <div class="hand">
+      Still, today is your day...
+      so I wanted to try.
+    </div>
+
+    <div class="hand">
+      Birthdays come every year.
+      But not every year gives us a person
+      who becomes a special part of our story.
+    </div>
+
+    <div class="hand">
+      And somehow, you became one of those people for me.
+    </div>
+
+    <div class="hand">
+      Your smile, your little habits, your random talks,
+      your cute anger, your dreams, your way of looking
+      at things...
+    </div>
+
+    <div class="hand">
+      All those little things that you probably don't even
+      think twice about have their own place in my memories.
+    </div>
+
+    <div class="hand emphasis">
+      I hope you never stop dreaming.
+    </div>
+
+    <div class="hand emphasis">
+      I hope you never stop believing in yourself.
+    </div>
+
+    <div class="hand">
+      Whenever life feels difficult,
+      I hope you remember that you are capable of
+      much more than you sometimes realise.
+    </div>
+
+    <div class="hand">
+      Today, I don't want to wish you only success.
+    </div>
+
+    <div class="hand">
+      I want to wish you peaceful mornings,
+      genuine smiles, good people,
+      beautiful memories and a heart that stays happy.
+    </div>
+
+    <div class="hand">
+      I hope the coming years give you reasons
+      to look back and smile.
+    </div>
+
+    <div class="hand">
+      And if someday you look back at this birthday,
+      I hope this little letter makes you smile
+      and reminds you that someone genuinely wished
+      beautiful things for you.
+    </div>
+
+
+    <div class="letterQuote">
+      “Some people become memories.<br>
+      Some become lessons.<br>
+      And some quietly become<br>
+      a beautiful part of your heart.”
+    </div>
+
+
+    <div class="hand">
+      Sanjana, whatever life brings next,
+      I hope you keep that beautiful smile of yours.
+    </div>
+
+    <div class="hand">
+      Keep chasing your dreams.
+    </div>
+
+    <div class="hand">
+      Keep becoming the person you want to be.
+    </div>
+
+    <div class="hand">
+      And most importantly...
+    </div>
+
+    <div class="hand emphasis big">
+      Keep being you.
+    </div>
+
+    <div class="hand">
+      Because that's the person who deserves
+      all the happiness in the world.
+    </div>
+
+    <div class="hand">
+      Happy Birthday, Sanjana. ❤️
+    </div>
+
+    <div class="hand">
+      I hope this year becomes one of
+      your most beautiful chapters yet.
+    </div>
+
+
+    <div class="signature">
+
+      <small>With lots of love,</small>
+
+      <strong>Ravi</strong>
+
+      <span>♥</span>
+
+    </div>
+
+    <div style="
+      text-align:center;
+      margin-top:45px;
+      color:#bd7187;
+      font-size:20px;
+    ">
+      ✦ &nbsp; ♥ &nbsp; ✦
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- FINAL -->
+
+<section>
+
+  <div class="card">
+
+    <div class="label">
+      BEFORE YOU LEAVE
+    </div>
+
+    <div class="final-title">
+      ❤️
+    </div>
+
+    <h2 style="font:38px Georgia,serif;margin:15px">
+      Make a Wish, Sanjana
+    </h2>
+
+    <div class="final-text">
+
+      Close your eyes for a moment.
+
+      <br><br>
+
+      Think about your dreams.
+      Your future.
+      Everything you want from life.
+
+      <br><br>
+
+      And make a wish.
+
+      <br><br>
+
+      I hope life gives you more reasons
+      to smile than reasons to worry.
+
+      <br><br>
+
+      I hope you achieve the things
+      you secretly dream about.
+
+      <br><br>
+
+      And most importantly...
+
+      <br>
+
+      <b>
+        I hope you stay happy.
+      </b>
+
+      <br><br>
+
+      Happy Birthday, Sanjana. ❤️
+
+    </div>
+
+    <div style="font-size:40px;margin-top:30px">
+      🎂 ✨ 🌸 💕 🫶🏻
+    </div>
+
+    <p style="margin-top:25px;opacity:.5">
+      Made with ❤️
+    </p>
+
+  </div>
+
+</section>
+
+</div>
+
+
+<script>
+
+/* =====================================================
+   START
+===================================================== */
+
+function start(){
+
+  const intro=document.getElementById("intro");
+  const main=document.getElementById("main");
+
+  intro.style.opacity="0";
+
+  setTimeout(()=>{
+
+    intro.style.display="none";
+    main.style.display="block";
+
+    createStars();
+
+    for(let i=0;i<15;i++){
+      setTimeout(createHeart,i*100);
+    }
+
+  },900);
+}
+
+
+/* =====================================================
+   BALLOONS
+===================================================== */
+
+const messages=[
+  "Tumhari smile ❤️",
+  "Tumhara pagalpan 😂",
+  "Tumhare dreams ✨",
+  "Tumhari kindness 🌸",
+  "Tumhari baatein 💕",
+  "Tumhari aankhein 🥹",
+  "Tumhara confidence 👑",
+  "Tumhari cute fights 😌",
+  "Tumhara heart ❤️",
+  "Simply YOU 🫶🏻"
+];
+
+const colors=[
+  "#ff4f81",
+  "#9b59b6",
+  "#3498db",
+  "#f1c40f",
+  "#2ecc71",
+  "#e67e22",
+  "#e84393",
+  "#6c5ce7",
+  "#00b894",
+  "#fd79a8"
+];
+
+let popped=0;
+
+const balloons=document.getElementById("balloons");
+
+messages.forEach((message,i)=>{
+
+  const balloon=document.createElement("div");
+
+  balloon.className="balloon";
+
+  balloon.style.background=colors[i];
+
+  balloon.innerHTML="<span>POP ME</span>";
+
+  balloon.onclick=()=>{
+
+    if(balloon.classList.contains("popping"))return;
+
+    balloon.classList.add("popping");
+
+    popped++;
+
+    document.getElementById("balloonMessage").innerHTML=
+      message;
+
+    popParticles(balloon);
+
+    if(popped===messages.length){
+
+      setTimeout(()=>{
+
+        document.getElementById("revealed").style.display="block";
+
+        celebration();
+
+      },700);
+    }
+  };
+
+  balloons.appendChild(balloon);
+});
+
+
+/* =====================================================
+   POP PARTICLES
+===================================================== */
+
+function popParticles(element){
+
+  const r=element.getBoundingClientRect();
+
+  for(let i=0;i<15;i++){
+
+    const p=document.createElement("div");
+
+    p.style.position="fixed";
+    p.style.left=(r.left+r.width/2)+"px";
+    p.style.top=(r.top+r.height/2)+"px";
+    p.style.width="7px";
+    p.style.height="7px";
+    p.style.borderRadius="50%";
+    p.style.background="#fff";
+    p.style.zIndex="1000";
+
+    document.body.appendChild(p);
+
+    const x=(Math.random()-.5)*180;
+    const y=(Math.random()-.5)*180;
+
+    p.animate(
+      [
+        {transform:"translate(0,0)",opacity:1},
+        {transform:`translate(${x}px,${y}px)`,opacity:0}
+      ],
+      {duration:600,easing:"ease-out"}
+    );
+
+    setTimeout(()=>p.remove(),600);
+  }
+}
+
+
+/* =====================================================
+   LETTER
+===================================================== */
+
+function openLetter(){
+
+  const envelope=document.getElementById("envelope");
+  const paper=document.getElementById("paper");
+
+  if(envelope.classList.contains("open"))return;
+
+  envelope.classList.add("open");
+
+  setTimeout(()=>{
+
+    paper.style.display="block";
+
+    const lines=
+      paper.querySelectorAll(".hand,.letterQuote");
+
+    lines.forEach((line,i)=>{
+
+      line.style.animationDelay=
+        (i*.18)+"s";
+
+    });
+
+    setTimeout(()=>{
+
+      paper.scrollIntoView({
+        behavior:"smooth",
+        block:"start"
+      });
+
+    },200);
+
+    celebration();
+
+  },1000);
+}
+
+
+/* =====================================================
+   HEARTS
+===================================================== */
+
+function createHeart(){
+
+  const h=document.createElement("div");
+
+  h.className="heart";
+
+  h.innerHTML=
+    ["❤️","💕","💗","💖","💓","💘"]
+    [Math.floor(Math.random()*6)];
+
+  h.style.left=Math.random()*100+"vw";
+
+  h.style.fontSize=
+    (15+Math.random()*25)+"px";
+
+  h.style.animationDuration=
+    (4+Math.random()*4)+"s";
+
+  document.body.appendChild(h);
+
+  setTimeout(()=>h.remove(),8000);
+}
+
+setInterval(createHeart,1000);
+
+
+/* =====================================================
+   STARS
+===================================================== */
+
+function createStars(){
+
+  for(let i=0;i<70;i++){
+
+    const s=document.createElement("div");
+
+    s.className="star";
+
+    s.style.left=Math.random()*100+"vw";
+    s.style.top=Math.random()*100+"vh";
+
+    s.style.animationDelay=
+      Math.random()*3+"s";
+
+    document.body.appendChild(s);
+  }
+}
+
+
+/* =====================================================
+   CONFETTI
+===================================================== */
+
+function confetti(){
+
+  const c=document.createElement("div");
+
+  c.className="confetti";
+
+  c.style.left=Math.random()*100+"vw";
+
+  c.style.background=[
+    "#ff4f81",
+    "#ffd166",
+    "#ffffff",
+    "#8be9fd",
+    "#c77dff"
+  ][Math.floor(Math.random()*5)];
+
+  c.style.animationDuration=
+    (3+Math.random()*3)+"s";
+
+  document.body.appendChild(c);
+
+  setTimeout(()=>c.remove(),6000);
+}
+
+
+/* =====================================================
+   CELEBRATION
+===================================================== */
+
+function celebration(){
+
+  for(let i=0;i<80;i++){
+
+    setTimeout(confetti,i*25);
+
+  }
+
+  for(let i=0;i<30;i++){
+
+    setTimeout(createHeart,i*70);
+
+  }
+}
+
+</script>
+
+</body>
+</html>
+```
